@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\MediaTekDocuments",
+    "\\MediaTekDocuments\\MediaTekDocuments",
+    "\\MediaTekDocuments\\MediaTekDocuments\\controller",
+    "\\MediaTekDocuments\\MediaTekDocuments\\dal",
+    "\\MediaTekDocuments\\MediaTekDocuments\\manager",
+    "\\MediaTekDocuments\\MediaTekDocuments\\model",
+    "\\MediaTekDocuments\\MediaTekDocuments\\view"
+  ],
+  "SelectedNode": "\\MediaTekDocuments\\MediaTekDocuments\\manager\\ApiRest.cs",
+  "PreviewInSolutionExplorer": false
+}

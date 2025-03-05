@@ -1,6 +1,10 @@
 ﻿using System.Collections.Generic;
 using MediaTekDocuments.model;
 using MediaTekDocuments.dal;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using Newtonsoft.Json;
+using System.Text;
 
 namespace MediaTekDocuments.controller
 {
@@ -38,7 +42,6 @@ namespace MediaTekDocuments.controller
         public List<Livre> GetAllLivres()
         {
             return access.GetAllLivres();
-
         }
 
         /// <summary>
@@ -96,6 +99,25 @@ namespace MediaTekDocuments.controller
         public bool CreerExemplaire(Exemplaire exemplaire)
         {
             return access.CreerExemplaire(exemplaire);
+        }
+
+        /// <summary>
+        /// Ajouter un livre dans la bdd
+        /// </summary>
+        /// <param name="livre">L'objet Livre concerné</param>
+        /// <returns>True si l'ajout a pu se faire</returns>
+        public bool AjouterLivre(Livre livre)
+        {
+            return access.AjouterLivre(livre);
+        }
+
+        /// <summary>
+        /// getter sur la liste des services
+        /// </summary>
+        /// <returns>Liste d'objets Services</returns>
+        public List<Service> GetServiceByUserName(string nomUtilisateur)
+        {
+            return access.GetServiceByUserName(nomUtilisateur);
         }
     }
 }

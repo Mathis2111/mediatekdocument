@@ -244,5 +244,41 @@ namespace MediaTekDocuments.dal
             }
         }
 
+        /// <summary>
+        /// Ajoute un livre en base de données via l'API.
+        /// </summary>
+        /// <param name="livre">Objet Livre à ajouter.</param>
+        /// <returns>True si l'ajout a réussi, False sinon.</returns>
+        public bool AjouterLivre(Livre livre)
+        {
+            if (livre == null)
+            {
+                return false;
+            }
+
+            string jsonLivre = JsonConvert.SerializeObject(livre);
+            try
+            {
+                List<Livre> liste = TraitementRecup<Livre>(POST, "livre", "champs=" + jsonLivre);
+                return (liste != null);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erreur lors de l'ajout du livre : " + ex.Message);
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Retourne les services d'un utilisateur
+        /// </summary>
+        /// <param name="nomUtilisateur">nom d'utilisateur du service concerné</param>
+        /// <returns>Liste d'objets Service</returns>
+        public List<Service> GetServiceByUserName(string nomUtilisateur)
+        {
+            String jsonNomUtilisateur = convertToJson("utilisateur", nomUtilisateur);
+            List<Service> lesServices = TraitementRecup<Service>(GET, "service/" + jsonNomUtilisateur, null);
+            return lesServices;
+        }
     }
 }

@@ -28,6 +28,7 @@ namespace MediaTekDocuments.view
         {
             InitializeComponent();
             this.controller = new FrmMediatekController();
+            GérerVisibilitéBoutons();
         }
 
         /// <summary>
@@ -46,6 +47,7 @@ namespace MediaTekDocuments.view
             }
         }
         #endregion
+
 
         #region Onglet Livres
         private readonly BindingSource bdgLivresListe = new BindingSource();
@@ -359,6 +361,42 @@ namespace MediaTekDocuments.view
                     break;
             }
             RemplirLivresListe(sortedList);
+        }
+
+        private void btnAjouterLivres_Click(object sender, EventArgs e)
+        {
+            FrmAjoutDocument frmAjoutDocument = new FrmAjoutDocument();
+            if (frmAjoutDocument.ShowDialog() == DialogResult.OK)
+            {
+                Livre nouveauLivre = frmAjoutDocument.NouveauLivre;
+                if (controller.AjouterLivre(nouveauLivre))
+                {
+                    lesLivres.Add(nouveauLivre);
+                    RemplirLivresListeComplete();
+                    MessageBox.Show("Livre ajouté avec succès !", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Erreur lors de l'ajout du livre.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            } 
+        }
+
+        public void GérerVisibilitéBoutons(bool afficher = true)
+        {
+            grpBoutonsLivres.Visible = afficher;
+            grpBoutonsDVD.Visible = afficher;
+            grpBoutonsRevues.Visible = afficher;
+            grpReceptionRevue.Visible = afficher;
+            grpReceptionExemplaire.Visible = afficher;
+        }
+
+        private void btnModifierLivres_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnSupprimerLivres_Click(object sender, EventArgs e)
+        {
         }
         #endregion
 
@@ -1238,6 +1276,13 @@ namespace MediaTekDocuments.view
                 pcbReceptionExemplaireRevueImage.Image = null;
             }
         }
+
+
         #endregion
+
+        private void txbLivresNumero_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
