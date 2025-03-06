@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.Configuration;
+using Serilog;
 using System.Linq;
 
 namespace MediaTekDocuments.dal
@@ -18,7 +19,7 @@ namespace MediaTekDocuments.dal
         /// <summary>
         /// adresse de l'API
         /// </summary>
-        private static readonly string uriApi = "http://localhost/rest_mediatekdocuments/";
+        private static readonly string uriApi = ConfigurationManager.AppSettings["API_URI"];
         /// <summary>
         /// instance unique de la classe
         /// </summary>
@@ -44,14 +45,21 @@ namespace MediaTekDocuments.dal
         /// </summary>
         private Access()
         {
-            String authenticationString;
+            Log.Logger = new LoggerConfiguration()
+            .MinimumLevel.Debug()
+            .WriteTo.Console()
+            .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day)
+            .CreateLogger();
             try
             {
-                authenticationString = "admin:adminpwd";
+                string apiUser = ConfigurationManager.AppSettings["API_USER"];
+                string apiPassword = ConfigurationManager.AppSettings["API_PASSWORD"];
+                string authenticationString = $"{apiUser}:{apiPassword}";
                 api = ApiRest.GetInstance(uriApi, authenticationString);
             }
             catch (Exception e)
             {
+                Log.Error("Erreur d'accès à l'API");
                 Console.WriteLine(e.Message);
                 Environment.Exit(0);
             }
@@ -101,7 +109,7 @@ namespace MediaTekDocuments.dal
         }
 
         /// <summary>
-        /// Retourne toutes les livres à partir de la BDD
+        /// Retourne tout les livres à partir de la BDD
         /// </summary>
         /// <returns>Liste d'objets Livre</returns>
         public List<Livre> GetAllLivres()
@@ -158,6 +166,7 @@ namespace MediaTekDocuments.dal
             }
             catch (Exception ex)
             {
+                Log.Error("Erreur lors de la création d'un exemplaire en base de données");
                 Console.WriteLine(ex.Message);
             }
             return false;
@@ -192,10 +201,12 @@ namespace MediaTekDocuments.dal
                 }
                 else
                 {
+                    Log.Error("Erreur lors de l'extraction du code retourné");
                     Console.WriteLine("code erreur = " + code + " message = " + (String)retour["message"]);
                 }
             }catch(Exception e)
             {
+                Log.Error("Erreur d'accès à l'API");
                 Console.WriteLine("Erreur lors de l'accès à l'API : "+e.Message);
                 Environment.Exit(0);
             }
@@ -264,6 +275,7 @@ namespace MediaTekDocuments.dal
             }
             catch (Exception ex)
             {
+                Log.Error("Erreur lors de l'ajout du livre");
                 Console.WriteLine("Erreur lors de l'ajout du livre : " + ex.Message);
                 return false;
             }
