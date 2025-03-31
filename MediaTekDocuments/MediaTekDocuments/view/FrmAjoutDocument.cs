@@ -1,4 +1,5 @@
-﻿using MediaTekDocuments.model;
+﻿using MediaTekDocuments.controller;
+using MediaTekDocuments.model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,28 +17,27 @@ namespace MediaTekDocuments.view
     /// </summary>
     public partial class FrmAjoutDocument : Form
     {
-        public Livre NouveauLivre { get; private set; }
+        public Livre NouveauLivre { get; set; }
+        private readonly FrmMediatekController controller = new FrmMediatekController();
+        private readonly BindingSource bdgGenres = new BindingSource();
+        private readonly BindingSource bdgPublics = new BindingSource();
+        private readonly BindingSource bdgRayons = new BindingSource();
 
         public FrmAjoutDocument()
         {
             InitializeComponent();
+            ChargerComboBox();
         }
 
         private void btnAjouter_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtBoxID.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxTitre.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxImage.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxISBN.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxAuteur.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxCollection.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxGenre.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxPublic.Text) ||
-                string.IsNullOrWhiteSpace(txtBoxRayon.Text))
-            {
-                MessageBox.Show("Tous les champs doivent être remplis.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            string idGenre = ((MediaTekDocuments.model.Categorie)cbxGenre.SelectedItem).Id;
+            string idPublic = ((MediaTekDocuments.model.Categorie)cbxPublic.SelectedItem).Id;
+            string idRayon = ((MediaTekDocuments.model.Categorie)cbxRayon.SelectedItem).Id;
+
+            lblIdGenre.Text = idGenre;
+            lblIdPublic.Text = idPublic;
+            lblIdRayon.Text = idRayon;
 
             NouveauLivre = new Livre (
                 txtBoxID.Text,
@@ -46,16 +46,38 @@ namespace MediaTekDocuments.view
                 txtBoxISBN.Text,
                 txtBoxAuteur.Text,
                 txtBoxCollection.Text,
-                txtBoxGenre.Text,
-                txtBoxGenre.Text,
-                txtBoxPublic.Text,
-                txtBoxPublic.Text,
-                txtBoxRayon.Text,
-                txtBoxRayon.Text
+                lblIdGenre.Text,
+                cbxGenre.Text,
+                lblIdPublic.Text,
+                cbxPublic.Text,
+                lblIdRayon.Text,
+                cbxRayon.Text
             );
 
             this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        public void RemplirComboCategorie(List<Categorie> lesCategories, BindingSource bdg, ComboBox cbx)
+        {
+            bdg.DataSource = lesCategories;
+            cbx.DataSource = bdg;
+            if (cbx.Items.Count > 0)
+            {
+                cbx.SelectedIndex = -1;
+            }
+        }
+
+        private void ChargerComboBox()
+        {
+            RemplirComboCategorie(controller.GetAllGenres(), bdgGenres, cbxGenre);
+            RemplirComboCategorie(controller.GetAllPublics(), bdgPublics, cbxPublic);
+            RemplirComboCategorie(controller.GetAllRayons(), bdgRayons, cbxRayon);
+        }
+
+        private void cbxGenre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

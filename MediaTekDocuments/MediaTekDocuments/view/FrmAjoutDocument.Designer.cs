@@ -33,6 +33,15 @@ namespace MediaTekDocuments.view
             this.CTXMAjoutDocument = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnAjouter = new System.Windows.Forms.Button();
             this.grpNouveauLivre = new System.Windows.Forms.GroupBox();
+            this.cbxRayon = new System.Windows.Forms.ComboBox();
+            this.cbxPublic = new System.Windows.Forms.ComboBox();
+            this.cbxGenre = new System.Windows.Forms.ComboBox();
+            this.txtBoxImage = new System.Windows.Forms.TextBox();
+            this.txtBoxCollection = new System.Windows.Forms.TextBox();
+            this.txtBoxAuteur = new System.Windows.Forms.TextBox();
+            this.txtBoxTitre = new System.Windows.Forms.TextBox();
+            this.txtBoxISBN = new System.Windows.Forms.TextBox();
+            this.txtBoxID = new System.Windows.Forms.TextBox();
             this.label59 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.pcbLivresImage = new System.Windows.Forms.PictureBox();
@@ -44,15 +53,9 @@ namespace MediaTekDocuments.view
             this.label8 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtBoxID = new System.Windows.Forms.TextBox();
-            this.txtBoxISBN = new System.Windows.Forms.TextBox();
-            this.txtBoxTitre = new System.Windows.Forms.TextBox();
-            this.txtBoxAuteur = new System.Windows.Forms.TextBox();
-            this.txtBoxCollection = new System.Windows.Forms.TextBox();
-            this.txtBoxGenre = new System.Windows.Forms.TextBox();
-            this.txtBoxPublic = new System.Windows.Forms.TextBox();
-            this.txtBoxRayon = new System.Windows.Forms.TextBox();
-            this.txtBoxImage = new System.Windows.Forms.TextBox();
+            this.lblIdGenre = new System.Windows.Forms.Label();
+            this.lblIdPublic = new System.Windows.Forms.Label();
+            this.lblIdRayon = new System.Windows.Forms.Label();
             this.grpNouveauLivre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLivresImage)).BeginInit();
             this.SuspendLayout();
@@ -75,10 +78,13 @@ namespace MediaTekDocuments.view
             // 
             // grpNouveauLivre
             // 
+            this.grpNouveauLivre.Controls.Add(this.lblIdRayon);
+            this.grpNouveauLivre.Controls.Add(this.lblIdPublic);
+            this.grpNouveauLivre.Controls.Add(this.lblIdGenre);
+            this.grpNouveauLivre.Controls.Add(this.cbxRayon);
+            this.grpNouveauLivre.Controls.Add(this.cbxPublic);
+            this.grpNouveauLivre.Controls.Add(this.cbxGenre);
             this.grpNouveauLivre.Controls.Add(this.txtBoxImage);
-            this.grpNouveauLivre.Controls.Add(this.txtBoxRayon);
-            this.grpNouveauLivre.Controls.Add(this.txtBoxPublic);
-            this.grpNouveauLivre.Controls.Add(this.txtBoxGenre);
             this.grpNouveauLivre.Controls.Add(this.txtBoxCollection);
             this.grpNouveauLivre.Controls.Add(this.txtBoxAuteur);
             this.grpNouveauLivre.Controls.Add(this.txtBoxTitre);
@@ -102,6 +108,73 @@ namespace MediaTekDocuments.view
             this.grpNouveauLivre.TabIndex = 35;
             this.grpNouveauLivre.TabStop = false;
             this.grpNouveauLivre.Text = "Nouveau Livre";
+            // 
+            // cbxRayon
+            // 
+            this.cbxRayon.FormattingEnabled = true;
+            this.cbxRayon.Location = new System.Drawing.Point(150, 170);
+            this.cbxRayon.Name = "cbxRayon";
+            this.cbxRayon.Size = new System.Drawing.Size(207, 21);
+            this.cbxRayon.TabIndex = 46;
+            // 
+            // cbxPublic
+            // 
+            this.cbxPublic.FormattingEnabled = true;
+            this.cbxPublic.Location = new System.Drawing.Point(150, 145);
+            this.cbxPublic.Name = "cbxPublic";
+            this.cbxPublic.Size = new System.Drawing.Size(207, 21);
+            this.cbxPublic.TabIndex = 45;
+            // 
+            // cbxGenre
+            // 
+            this.cbxGenre.FormattingEnabled = true;
+            this.cbxGenre.Location = new System.Drawing.Point(150, 120);
+            this.cbxGenre.Name = "cbxGenre";
+            this.cbxGenre.Size = new System.Drawing.Size(207, 21);
+            this.cbxGenre.TabIndex = 44;
+            this.cbxGenre.SelectedIndexChanged += new System.EventHandler(this.cbxGenre_SelectedIndexChanged);
+            // 
+            // txtBoxImage
+            // 
+            this.txtBoxImage.Location = new System.Drawing.Point(150, 198);
+            this.txtBoxImage.Name = "txtBoxImage";
+            this.txtBoxImage.Size = new System.Drawing.Size(390, 20);
+            this.txtBoxImage.TabIndex = 43;
+            // 
+            // txtBoxCollection
+            // 
+            this.txtBoxCollection.Location = new System.Drawing.Point(150, 94);
+            this.txtBoxCollection.Name = "txtBoxCollection";
+            this.txtBoxCollection.Size = new System.Drawing.Size(391, 20);
+            this.txtBoxCollection.TabIndex = 39;
+            // 
+            // txtBoxAuteur
+            // 
+            this.txtBoxAuteur.Location = new System.Drawing.Point(150, 71);
+            this.txtBoxAuteur.Name = "txtBoxAuteur";
+            this.txtBoxAuteur.Size = new System.Drawing.Size(207, 20);
+            this.txtBoxAuteur.TabIndex = 38;
+            // 
+            // txtBoxTitre
+            // 
+            this.txtBoxTitre.Location = new System.Drawing.Point(150, 45);
+            this.txtBoxTitre.Name = "txtBoxTitre";
+            this.txtBoxTitre.Size = new System.Drawing.Size(391, 20);
+            this.txtBoxTitre.TabIndex = 37;
+            // 
+            // txtBoxISBN
+            // 
+            this.txtBoxISBN.Location = new System.Drawing.Point(440, 17);
+            this.txtBoxISBN.Name = "txtBoxISBN";
+            this.txtBoxISBN.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxISBN.TabIndex = 36;
+            // 
+            // txtBoxID
+            // 
+            this.txtBoxID.Location = new System.Drawing.Point(150, 17);
+            this.txtBoxID.Name = "txtBoxID";
+            this.txtBoxID.Size = new System.Drawing.Size(99, 20);
+            this.txtBoxID.TabIndex = 35;
             // 
             // label59
             // 
@@ -213,68 +286,29 @@ namespace MediaTekDocuments.view
             this.label9.TabIndex = 7;
             this.label9.Text = "Code ISBN :";
             // 
-            // txtBoxID
+            // lblIdGenre
             // 
-            this.txtBoxID.Location = new System.Drawing.Point(150, 17);
-            this.txtBoxID.Name = "txtBoxID";
-            this.txtBoxID.Size = new System.Drawing.Size(99, 20);
-            this.txtBoxID.TabIndex = 35;
+            this.lblIdGenre.AutoSize = true;
+            this.lblIdGenre.Location = new System.Drawing.Point(389, 127);
+            this.lblIdGenre.Name = "lblIdGenre";
+            this.lblIdGenre.Size = new System.Drawing.Size(0, 13);
+            this.lblIdGenre.TabIndex = 47;
             // 
-            // txtBoxISBN
+            // lblIdPublic
             // 
-            this.txtBoxISBN.Location = new System.Drawing.Point(440, 17);
-            this.txtBoxISBN.Name = "txtBoxISBN";
-            this.txtBoxISBN.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxISBN.TabIndex = 36;
+            this.lblIdPublic.AutoSize = true;
+            this.lblIdPublic.Location = new System.Drawing.Point(392, 152);
+            this.lblIdPublic.Name = "lblIdPublic";
+            this.lblIdPublic.Size = new System.Drawing.Size(0, 13);
+            this.lblIdPublic.TabIndex = 48;
             // 
-            // txtBoxTitre
+            // lblIdRayon
             // 
-            this.txtBoxTitre.Location = new System.Drawing.Point(150, 45);
-            this.txtBoxTitre.Name = "txtBoxTitre";
-            this.txtBoxTitre.Size = new System.Drawing.Size(391, 20);
-            this.txtBoxTitre.TabIndex = 37;
-            // 
-            // txtBoxAuteur
-            // 
-            this.txtBoxAuteur.Location = new System.Drawing.Point(150, 71);
-            this.txtBoxAuteur.Name = "txtBoxAuteur";
-            this.txtBoxAuteur.Size = new System.Drawing.Size(207, 20);
-            this.txtBoxAuteur.TabIndex = 38;
-            // 
-            // txtBoxCollection
-            // 
-            this.txtBoxCollection.Location = new System.Drawing.Point(150, 94);
-            this.txtBoxCollection.Name = "txtBoxCollection";
-            this.txtBoxCollection.Size = new System.Drawing.Size(391, 20);
-            this.txtBoxCollection.TabIndex = 39;
-            // 
-            // txtBoxGenre
-            // 
-            this.txtBoxGenre.Location = new System.Drawing.Point(150, 119);
-            this.txtBoxGenre.Name = "txtBoxGenre";
-            this.txtBoxGenre.Size = new System.Drawing.Size(207, 20);
-            this.txtBoxGenre.TabIndex = 40;
-            // 
-            // txtBoxPublic
-            // 
-            this.txtBoxPublic.Location = new System.Drawing.Point(150, 144);
-            this.txtBoxPublic.Name = "txtBoxPublic";
-            this.txtBoxPublic.Size = new System.Drawing.Size(207, 20);
-            this.txtBoxPublic.TabIndex = 41;
-            // 
-            // txtBoxRayon
-            // 
-            this.txtBoxRayon.Location = new System.Drawing.Point(150, 171);
-            this.txtBoxRayon.Name = "txtBoxRayon";
-            this.txtBoxRayon.Size = new System.Drawing.Size(207, 20);
-            this.txtBoxRayon.TabIndex = 42;
-            // 
-            // txtBoxImage
-            // 
-            this.txtBoxImage.Location = new System.Drawing.Point(150, 198);
-            this.txtBoxImage.Name = "txtBoxImage";
-            this.txtBoxImage.Size = new System.Drawing.Size(390, 20);
-            this.txtBoxImage.TabIndex = 43;
+            this.lblIdRayon.AutoSize = true;
+            this.lblIdRayon.Location = new System.Drawing.Point(389, 173);
+            this.lblIdRayon.Name = "lblIdRayon";
+            this.lblIdRayon.Size = new System.Drawing.Size(0, 13);
+            this.lblIdRayon.TabIndex = 49;
             // 
             // FrmAjoutDocument
             // 
@@ -309,12 +343,15 @@ namespace MediaTekDocuments.view
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtBoxImage;
-        private System.Windows.Forms.TextBox txtBoxRayon;
-        private System.Windows.Forms.TextBox txtBoxPublic;
-        private System.Windows.Forms.TextBox txtBoxGenre;
         private System.Windows.Forms.TextBox txtBoxCollection;
         private System.Windows.Forms.TextBox txtBoxAuteur;
         private System.Windows.Forms.TextBox txtBoxTitre;
         private System.Windows.Forms.TextBox txtBoxISBN;
+        private System.Windows.Forms.ComboBox cbxRayon;
+        private System.Windows.Forms.ComboBox cbxPublic;
+        private System.Windows.Forms.ComboBox cbxGenre;
+        private System.Windows.Forms.Label lblIdGenre;
+        private System.Windows.Forms.Label lblIdRayon;
+        private System.Windows.Forms.Label lblIdPublic;
     }
 }

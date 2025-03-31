@@ -38,6 +38,14 @@ namespace MediaTekDocuments.dal
         private const string POST = "POST";
         /// <summary>
         /// méthode HTTP pour update
+        /// </summary>
+        private const string PUT = "PUT";
+        /// <summary>
+        /// méthode HTTP pour update
+        /// </summary>
+        private const string DELETE = "DELETE";
+        /// <summary>
+        /// méthode HTTP pour update
 
         /// <summary>
         /// Méthode privée pour créer un singleton
@@ -223,6 +231,7 @@ namespace MediaTekDocuments.dal
         {
             Dictionary<Object, Object> dictionary = new Dictionary<Object, Object>();
             dictionary.Add(nom, valeur);
+
             return JsonConvert.SerializeObject(dictionary);
         }
 
@@ -267,10 +276,10 @@ namespace MediaTekDocuments.dal
                 return false;
             }
 
-            string jsonLivre = JsonConvert.SerializeObject(livre);
+            string jsonLivre = JsonConvert.SerializeObject(livre); 
             try
             {
-                List<Livre> liste = TraitementRecup<Livre>(POST, "livre", "champs=" + jsonLivre);
+                List<Livre> liste = TraitementRecup<Livre>(POST, "ajout_livre", "champs=" + jsonLivre);
                 return (liste != null);
             }
             catch (Exception ex)
@@ -291,6 +300,238 @@ namespace MediaTekDocuments.dal
             String jsonNomUtilisateur = convertToJson("utilisateur", nomUtilisateur);
             List<Service> lesServices = TraitementRecup<Service>(GET, "service/" + jsonNomUtilisateur, null);
             return lesServices;
+        }
+
+        /// <summary>
+        /// Modifie un livre en base de données via l'API.
+        /// </summary>
+        /// <param name="livre">Objet Livre à modifier.</param>
+        /// <returns>True si la modification a réussi, False sinon.</returns>
+        public bool UpdateLivre(Livre livre)
+        {
+            if (livre == null)
+            {
+                return false;
+            }
+
+            string jsonLivre = JsonConvert.SerializeObject(livre);
+            try
+            {
+                List<Livre> liste = TraitementRecup<Livre>(PUT, "modif_livre", "champs=" + jsonLivre);
+                return (liste != null);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Erreur lors de la modification du livre");
+                Console.WriteLine("Erreur lors de la modification du livre : " + ex.Message);
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Retourne les commandes des documents
+        /// </summary>
+        /// <param name="idDocument">id du document concerné</param>
+        /// <returns>Liste d'objets CommandeDocument</returns>
+
+        public List<CommandeDocument> GetCommandesDocument(string idDocument)
+        {
+            
+              string jsonIdDocument = convertToJson("Id", idDocument);
+              List<CommandeDocument> lesCommandesDocument = TraitementRecup<CommandeDocument>(GET, "commandedocument/" + jsonIdDocument, null);
+              return lesCommandesDocument;
+            
+        }
+
+        /// <summary>
+        /// Retourne les commandes
+        /// </summary>
+        /// <param name="idDocument">id du document concerné</param>
+        /// <returns>Liste d'objets CommandeDocument</returns>
+
+        public List<Commande> GetCommandes(string idDocument)
+        {
+            string jsonIdDocument = convertToJson("Id", idDocument);
+            List<Commande> lesCommandes = TraitementRecup<Commande>(GET, "commande/" + jsonIdDocument, null);
+            return lesCommandes;
+        }
+
+        /// <summary>
+        /// Retourne les suivis d'un document
+        /// </summary>
+        /// <returns>Liste d'objets Suivi</returns>
+        public List<Suivi> GetAllSuivis()
+        {
+            List<Suivi> lesSuivis = TraitementRecup<Suivi>(GET, "suivi", null);
+            return lesSuivis;
+        }
+
+        /// <summary>
+        /// Ecriture d'une commande en base de données
+        /// </summary>
+        /// <param name="commande">Objet de type Commande à insérer</param>
+        /// <returns>True si l'insertion a pu se faire</returns>
+        public bool CreerCommande(Commande commande)
+        {
+            string jsonCreerCommande = JsonConvert.SerializeObject(commande, new CustomDateTimeConverter());
+            Console.WriteLine("jsonCreerCommande " + jsonCreerCommande);
+            try
+            {
+                // récupération soit d'une liste vide (requête ok) soit de null (erreur)
+                List<Commande> liste = TraitementRecup<Commande>(POST, "ajout_commande", "champs=" + jsonCreerCommande);
+                return (liste != null);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Log.Error("Access.CreerCommande catch jsonCreerCommande={0} erreur={1} ", jsonCreerCommande, ex.Message);
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Ecriture d'une commande de document en base de données
+        /// </summary>
+        /// <param name="id">Id de la commande de document à insérer</param>
+        /// <param name="nbExemplaire">Nombre d'exemplaires de la commande de document</param>
+        /// <param name="idLivreDvd">Id du livreDvd correspondant à la commande de document</param>
+        /// <param name="idSuivi">Id de l'étape de suivi de la commande de document</param>
+        /// <returns>True si l'insertion a pu se faire</returns>
+        public bool CreerCommandeDocument(string id, int nbExemplaire, string idLivreDvd, string idSuivi)
+        {
+            String jsonCreerCommandeDocument = "{ \"Id\" : \"" + id + "\", \"NbExemplaire\" : \"" + nbExemplaire + "\", \"IdLivreDvd\" : \"" + idLivreDvd + "\", \"IdSuivi\" : \"" + idSuivi + "\"}";
+            Console.WriteLine("jsonCreerCommandeDocument" + jsonCreerCommandeDocument);
+            try
+            {
+                // récupération soit d'une liste vide (requête ok) soit de null (erreur)
+                List<CommandeDocument> liste = TraitementRecup<CommandeDocument>(POST, "ajout_commandeDocument", "champs=" + jsonCreerCommandeDocument);
+                return (liste != null);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Log.Error("Access.CreerCommandeDocument catch jsonCreerCommandeDocument={0} erreur={1} ", jsonCreerCommandeDocument, ex.Message);
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Modification de l'étape de suivi d'une commande de document en base de données
+        /// </summary>
+        /// <param name="id">Id de la commande de document à modifier</param>
+        /// <param name="idSuivi">Id de l'étape de suivi</param>
+        /// <returns>True si la modification a pu se faire</returns>
+        public bool ModifierSuiviCommandeDocument(string id, string idSuivi)
+        {
+            string jsonModifierSuiviCommandeDocument = "{ \"Id\" : \"" + id + "\", \"IdSuivi\" : \"" + idSuivi + "\"}";
+            Console.WriteLine("jsonModifierSuiviCommandeDocument" + jsonModifierSuiviCommandeDocument);
+            try
+            {
+                // récupération soit d'une liste vide (requête ok) soit de null (erreur)
+                List<CommandeDocument> liste = TraitementRecup<CommandeDocument>(PUT, "modif_etatCommande", "champs=" + jsonModifierSuiviCommandeDocument);
+                return (liste != null);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Log.Error("Access.ModifierSuiviCommandeDocument catch jsonModifierSuiviCommandeDocument={0} erreur={1} ", jsonModifierSuiviCommandeDocument, ex.Message);
+
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Suppression d'une commande de document en base de données
+        /// </summary>
+        /// <param name="commandesDocument">Objet de type CommandeDocument à supprimer</param>
+        /// <returns>True si la suppression a pu se faire</returns>
+        public bool SupprimerCommandeDocument(CommandeDocument commandesDocument)
+        {
+            string jsonSupprimerCommandeDocument = JsonConvert.SerializeObject(commandesDocument, new CustomDateTimeConverter());
+            Console.WriteLine("jsonSupprimerCommandeDocument=" + jsonSupprimerCommandeDocument);
+            try
+            {
+                // récupération soit d'une liste vide (requête ok) soit de null (erreur)
+                List<CommandeDocument> liste = TraitementRecup<CommandeDocument>(DELETE, "sup_commande/" + jsonSupprimerCommandeDocument, null);
+                return (liste != null);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Log.Error("Access.SupprimerCommandeDocument catch jsonSupprimerCommandeDocument={0} erreur={1} ", jsonSupprimerCommandeDocument, ex.Message);
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Retourne les abonnements d'une revue
+        /// </summary>
+        /// <param name="idDocument">id du document concerné</param>
+        /// <returns>Liste d'objets Abonnement</returns>
+        public List<Abonnement> GetAbonnementRevue(string idDocument)
+        {
+            string jsonIdDocument = convertToJson("Id", idDocument);
+            List<Abonnement> lesAbonnementsRevue = TraitementRecup<Abonnement>(GET, "abonnement/" + jsonIdDocument, null);
+            return lesAbonnementsRevue;
+        }
+
+        /// <summary>
+        /// Retourne les abonnements arrivants à échéance dans 30 jours
+        /// </summary>
+        /// <returns></returns>
+        public List<Abonnement> GetAbonnementsEcheance()
+        {
+            List<Abonnement> lesAbonnementsAEcheance = TraitementRecup<Abonnement>(GET, "abonnementsecheance", null);
+            return lesAbonnementsAEcheance;
+        }
+
+        /// <summary>
+        /// Ecriture d'un abonnement à une revue en base de données
+        /// </summary>
+        /// <param name="id">Id de l'abonnement à une revue à insérer</param>
+        /// <param name="dateFinAbonnement">Date de fin d'abonnement à une revue</param>
+        /// <param name="idRevue">Id de la revue concernée par l'abonnement</param>
+        /// <returns>True si l'insertion a pu se faire</returns>
+        public bool CreerAbonnementRevue(string id, DateTime dateFinAbonnement, string idRevue)
+        {
+            String jsonDateCommande = JsonConvert.SerializeObject(dateFinAbonnement, new CustomDateTimeConverter());
+            String jsonCreerAbonnementRevue = "{\"Id\":\"" + id + "\", \"DateFinAbonnement\" : " + jsonDateCommande + ", \"IdRevue\" :  \"" + idRevue + "\"}";
+            Console.WriteLine("jsonCreerAbonnementRevue" + jsonCreerAbonnementRevue);
+            try
+            {
+                // récupération soit d'une liste vide (requête ok) soit de null (erreur)
+                List<Abonnement> liste = TraitementRecup<Abonnement>(POST, "ajout_abonnement", "champs=" + jsonCreerAbonnementRevue);
+                return (liste != null);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Log.Error("Access.CreerAbonnementRevue catch jsonCreerAbonnementRevue={0} erreur={1} ", jsonCreerAbonnementRevue, ex.Message);
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Suppression d'un abonnement de revue en base de données
+        /// </summary>
+        /// <param name="abonnement">Objet de type Abonnement à supprimer</param>
+        /// <returns>True si la suppression a pu se faire</returns>
+        public bool SupprimerAbonnementRevue(Abonnement abonnement)
+        {
+            string jsonSupprimerAbonnementRevue = JsonConvert.SerializeObject(abonnement, new CustomDateTimeConverter());
+            Console.WriteLine("jsonSupprimerAbonnementRevue=" + jsonSupprimerAbonnementRevue);
+            try
+            {
+                // récupération soit d'une liste vide (requête ok) soit de null (erreur)
+                List<Abonnement> liste = TraitementRecup<Abonnement>(DELETE, "sup_abonnement/" + jsonSupprimerAbonnementRevue, null);
+                return (liste != null);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Log.Error("Access.SupprimerAbonnementRevue catch jsonSupprimerAbonnementRevue={0} erreur={1} ", jsonSupprimerAbonnementRevue, ex.Message);
+            }
+            return false;
         }
     }
 }

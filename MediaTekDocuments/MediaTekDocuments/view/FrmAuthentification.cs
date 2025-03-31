@@ -29,6 +29,8 @@ namespace MediaTekDocuments.view
 
         public void btnValider_Click(object sender, EventArgs e)
         {
+            FrmAlerteFinAbonnement frmAlerteFinAbonnement = new FrmAlerteFinAbonnement(controller);
+            FrmAuthentification frmAuthentification = new FrmAuthentification();
             lesServices = controller.GetServiceByUserName(txtBoxNom.Text);
 
             if (lesServices.Count > 0)
@@ -43,11 +45,13 @@ namespace MediaTekDocuments.view
                 }
                 if (nomService == "Administrateur" || nomService == "Administratif")
                 {
+                    frmAlerteFinAbonnement.ShowDialog();
                     FrmMediatek frmMediatek = new FrmMediatek();
                     frmMediatek.ShowDialog();
                 }
                 if (nomService == "Prêts")
                 {
+                   
                     FrmMediatek frmMediatek = new FrmMediatek();
                     frmMediatek.GérerVisibilitéBoutons(false);
                     frmMediatek.ShowDialog();
