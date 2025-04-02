@@ -1,0 +1,17 @@
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\Controller-ParutionTest\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\Controller-ParutionTest\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\Controller-ParutionTest\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\Controller-ParutionTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\Controller-ParutionTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\Controller-ParutionTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\Controller-ParutionTest\bin\Debug\Controller-ParutionTest.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\Controller-ParutionTest\bin\Debug\Controller-ParutionTest.pdb
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\Controller-ParutionTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\Controller-ParutionTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\Controller-ParutionTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\Controller-ParutionTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\Controller-ParutionTest\obj\Debug\Controller-ParutionTest.csproj.AssemblyReference.cache
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\Controller-ParutionTest\obj\Debug\Controller-ParutionTest.csproj.CoreCompileInputs.cache
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\Controller-ParutionTest\obj\Debug\Controller-ParutionTest.csproj.CopyComplete
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\Controller-ParutionTest\obj\Debug\Controller-ParutionTest.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\Controller-ParutionTest\obj\Debug\Controller-ParutionTest.pdb

@@ -1,0 +1,106 @@
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\obj\Debug\MediaTekDocuments.csproj.AssemblyReference.cache
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\obj\Debug\MediaTekDocuments.Properties.Resources.resources
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\obj\Debug\MediaTekDocuments.view.FrmMediatek.resources
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\obj\Debug\MediaTekDocuments.csproj.GenerateResource.cache
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\obj\Debug\MediaTekDocuments.csproj.CoreCompileInputs.cache
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\bin\Debug\MediaTekDocuments.exe.config
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\bin\Debug\MediaTekDocuments.exe
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\bin\Debug\MediaTekDocuments.pdb
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\bin\Debug\Newtonsoft.Json.Bson.dll
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Buffers.dll
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Memory.dll
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\bin\Debug\Newtonsoft.Json.Bson.pdb
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\bin\Debug\Newtonsoft.Json.Bson.xml
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Buffers.xml
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Memory.xml
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\obj\Debug\MediaTekDocuments.csproj.CopyComplete
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\obj\Debug\MediaTekDocuments.exe
+C:\Users\Mathis\Documents\BTS SIO\2ème année\Projet 2\MediaTekDocuments\MediaTekDocuments\obj\Debug\MediaTekDocuments.pdb
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\MediaTekDocuments.exe.config
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\MediaTekDocuments.exe
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\MediaTekDocuments.pdb
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\Newtonsoft.Json.Bson.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Buffers.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Memory.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\Newtonsoft.Json.Bson.pdb
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\Newtonsoft.Json.Bson.xml
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Buffers.xml
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Memory.xml
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\obj\Debug\MediaTekDocuments.Properties.Resources.resources
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\obj\Debug\MediaTekDocuments.view.FrmMediatek.resources
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\obj\Debug\MediaTekDocuments.csproj.GenerateResource.cache
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\obj\Debug\MediaTekDocuments.csproj.CoreCompileInputs.cache
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\obj\Debug\MediaTekDocuments.csproj.CopyComplete
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\obj\Debug\MediaTekDocuments.exe
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\obj\Debug\MediaTekDocuments.pdb
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\obj\Debug\MediaTekDocuments.view.FrmAjoutDocument.resources
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\obj\Debug\MediaTekDocuments.view.FrmAuthentification.resources
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\Serilog.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\Serilog.Sinks.Console.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\Serilog.Sinks.File.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Threading.Channels.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\Serilog.xml
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\Serilog.Sinks.Console.xml
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\Serilog.Sinks.File.xml
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Threading.Channels.xml
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\obj\Debug\MediaTekDocuments.view.FrmAlerteFinAbonnement.resources
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\Microsoft.Data.Tools.Components.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\Microsoft.Data.Tools.Schema.Sql.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\Microsoft.Data.Tools.Schema.Sql.UnitTesting.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\Microsoft.Data.Tools.Utilities.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\Microsoft.Build.Framework.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\Microsoft.SqlServer.TransactSql.ScriptDom.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\Microsoft.Build.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Collections.Immutable.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Text.Json.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\Microsoft.NET.StringTools.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Threading.Tasks.Dataflow.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\fr\Microsoft.Data.Tools.Schema.Sql.resources.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\fr\Microsoft.Data.Tools.Schema.Sql.UnitTesting.resources.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\fr\Microsoft.Data.Tools.Components.resources.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\fr\Microsoft.Data.Tools.Utilities.resources.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\fr\Microsoft.SqlServer.TransactSql.ScriptDom.resources.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\cs\Microsoft.Build.resources.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\de\Microsoft.Build.resources.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\en\Microsoft.Build.resources.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\es\Microsoft.Build.resources.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\fr\Microsoft.Build.resources.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\it\Microsoft.Build.resources.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\ja\Microsoft.Build.resources.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\ko\Microsoft.Build.resources.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\pl\Microsoft.Build.resources.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\pt-BR\Microsoft.Build.resources.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\ru\Microsoft.Build.resources.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\tr\Microsoft.Build.resources.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\zh-Hans\Microsoft.Build.resources.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\zh-Hant\Microsoft.Build.resources.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\fr\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\obj\Debug\MediaTekDocuments.csproj.AssemblyReference.cache
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\obj\Debug\MediaTekDocuments.exe.config
+C:\Users\Mathis\Documents\GitHub\mediatekdocument\MediaTekDocuments\MediaTekDocuments\bin\Debug\MediaTekDocuments.xml
