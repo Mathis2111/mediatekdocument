@@ -1,0 +1,3 @@
+2025-03-24 16:10:43.334 +01:00 [ERR] Erreur lors de l'extraction du code retourné
+2025-03-24 16:11:44.202 +01:00 [ERR] Erreur lors de l'extraction du code retourné
+2025-03-24 16:12:05.970 +01:00 [ERR] Erreur lors de l'extraction du code retourné
