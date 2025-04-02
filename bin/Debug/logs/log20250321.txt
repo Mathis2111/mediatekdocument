@@ -1,2 +1,0 @@
-2025-03-21 15:00:54.832 +01:00 [ERR] Erreur d'accès à l'API
-2025-03-21 16:25:51.871 +01:00 [ERR] Erreur d'accès à l'API
