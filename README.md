@@ -33,7 +33,7 @@ Possibilité de sélectionner une revue et d'afficher les abonnements associés.
 Suppression d'une commande de revue uniquement si aucun exemplaire n'y est rattaché.<br>
 
 Ajout d'une alerte automatique affichant les abonnements se terminant dans moins de 30 jours.<br>
-![img7](https://monportefolioanis.go.yj.fr/photo_readme_AP2/alerte_abonnement_fin.png)<br>
+![img7](https://github.com/Mathis2111/mediatekdocument/blob/main/dateExpiration.png)<br>
 
 ### Mise en place de l'authentification
 <br>
