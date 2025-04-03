@@ -12,7 +12,7 @@ Nouvelle interface graphique pour gérer les commandes de livres et de DVD.<br>
 ![img2](https://monportefolioanis.go.yj.fr/photo_readme_AP2/onglets_creer.png)<br>
 Tri des listes sur les colonnes disponibles.<br>
 
-Affichage des informations d'un livre/DVD et des commandes associées, triées par date décroissante.<br>
+Affichage des informations d'un livre/DVD et des commandes associées.<br>
 
 Ajout d'une nouvelle commande via un groupbox.<br>
 
