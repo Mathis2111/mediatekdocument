@@ -45,7 +45,11 @@ Restriction de l'alerte de fin d'abonnement aux utilisateurs concernés.<br>
 
 ### Télécharegement de l'applcation
 <br>
-Pour télécharger l'application, il vous suffit de cliquer sur le fichier "MediatekDocument2025Installeur" situé dans les fichiers plus haut.<br>
+Pour télécharger l'application, il vous suffit de cliquer sur le fichier "MediatekDocument2025Installeur" situé dans les fichiers plus haut, puis cliqué sur " view Raw.<br>
+- La fenêtre "Bienvenue dans l'Assistant Installation de Setup" s'ouvre. Cliquez sur "Suivant".<br>
+- Garder le dossier proposé, sélectionner "Tout le monde" puis cliquer sur Suivant.<br>
+- Confirmer en cliquant à nouveau sur Suivant.<br>
+- A la fin de l'installation, cliquer sur "Fermer".<br>
 
 ### Corrections de Sécurité<br>
 
