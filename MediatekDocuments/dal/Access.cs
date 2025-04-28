@@ -329,6 +329,179 @@ namespace MediaTekDocuments.dal
         }
 
         /// <summary>
+        /// Suppression d'un livre en base de données
+        /// </summary>
+        /// <param name="livre">Objet de type Livre à supprimer</param>
+        /// <returns>True si la suppression a pu se faire</returns>
+        public bool SupprimerLivre(Livre livre)
+        {
+            string jsonSupprimerLivre = JsonConvert.SerializeObject(livre, new CustomDateTimeConverter());
+            Console.WriteLine("jsonSupprimerLivre=" + jsonSupprimerLivre);
+            try
+            {
+                // récupération soit d'une liste vide (requête ok) soit de null (erreur)
+                List<Livre> liste = TraitementRecup<Livre>(DELETE, "sup_livre/" + jsonSupprimerLivre, null);
+                return (liste != null);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Log.Error("Access.SupprimerLivre catch jsonSupprimerLivre={0} erreur={1} ", jsonSupprimerLivre, ex.Message);
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Ajoute un dvd en base de données via l'API.
+        /// </summary>
+        /// <param name="dvd">Objet Dvd à ajouter.</param>
+        /// <returns>True si l'ajout a réussi, False sinon.</returns>
+        public bool AjouterDvd(Dvd dvd)
+        {
+            if (dvd == null)
+            {
+                return false;
+            }
+
+            string jsonDvd = JsonConvert.SerializeObject(dvd);
+            try
+            {
+                List<Dvd> liste = TraitementRecup<Dvd>(POST, "ajout_dvd", "champs=" + jsonDvd);
+                return (liste != null);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Erreur lors de l'ajout d'un dvd");
+                Console.WriteLine("Erreur lors de l'ajout d'un dvd : " + ex.Message);
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Modifie un dvd en base de données via l'API.
+        /// </summary>
+        /// <param name="dvd">Objet Dvd à modifier.</param>
+        /// <returns>True si la modification a réussi, False sinon.</returns>
+        public bool UpdateDvd(Dvd dvd)
+        {
+            if (dvd == null)
+            {
+                return false;
+            }
+
+            string jsonDvd = JsonConvert.SerializeObject(dvd);
+            try
+            {
+                List<Dvd> liste = TraitementRecup<Dvd>(PUT, "modif_dvd", "champs=" + jsonDvd);
+                return (liste != null);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Erreur lors de la modification du dvd");
+                Console.WriteLine("Erreur lors de la modification du dvd : " + ex.Message);
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Suppression d'un dvd en base de données
+        /// </summary>
+        /// <param name="dvd">Objet de type Dvd à supprimer</param>
+        /// <returns>True si la suppression a pu se faire</returns>
+        public bool SupprimerDvd(Dvd dvd)
+        {
+            string jsonSupprimerDvd = JsonConvert.SerializeObject(dvd, new CustomDateTimeConverter());
+            Console.WriteLine("jsonSupprimerDvd=" + jsonSupprimerDvd);
+            try
+            {
+                // récupération soit d'une liste vide (requête ok) soit de null (erreur)
+                List<Dvd> liste = TraitementRecup<Dvd>(DELETE, "sup_dvd/" + jsonSupprimerDvd, null);
+                return (liste != null);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Log.Error("Access.SupprimerDvd catch jsonSupprimerDvd={0} erreur={1} ", jsonSupprimerDvd, ex.Message);
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Ajoute une revue en base de données via l'API.
+        /// </summary>
+        /// <param name="revue">Objet Revue à ajouter.</param>
+        /// <returns>True si l'ajout a réussi, False sinon.</returns>
+        public bool AjouterRevue(Revue revue)
+        {
+            if (revue == null)
+            {
+                return false;
+            }
+
+            string jsonRevue = JsonConvert.SerializeObject(revue);
+            try
+            {
+                List<Revue> liste = TraitementRecup<Revue>(POST, "ajout_revue", "champs=" + jsonRevue);
+                return (liste != null);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Erreur lors de l'ajout d'une revue");
+                Console.WriteLine("Erreur lors de l'ajout d'une revue: " + ex.Message);
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Modifie une revue en base de données via l'API.
+        /// </summary>
+        /// <param name="revue">Objet Revue à modifier.</param>
+        /// <returns>True si la modification a réussi, False sinon.</returns>
+        public bool UpdateRevue(Revue revue)
+        {
+            if (revue == null)
+            {
+                return false;
+            }
+
+            string jsonRevue = JsonConvert.SerializeObject(revue);
+            try
+            {
+                List<Revue> liste = TraitementRecup<Revue>(PUT, "modif_revue", "champs=" + jsonRevue);
+                return (liste != null);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Erreur lors de la modification de la revue");
+                Console.WriteLine("Erreur lors de la modification de la revue : " + ex.Message);
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Suppression d'une revue en base de données
+        /// </summary>
+        /// <param name="revue">Objet de type Revue à supprimer</param>
+        /// <returns>True si la suppression a pu se faire</returns>
+        public bool SupprimerRevue(Revue revue)
+        {
+            string jsonSupprimerRevue = JsonConvert.SerializeObject(revue, new CustomDateTimeConverter());
+            Console.WriteLine("jsonSupprimerRevue=" + jsonSupprimerRevue);
+            try
+            {
+                // récupération soit d'une liste vide (requête ok) soit de null (erreur)
+                List<Revue> liste = TraitementRecup<Revue>(DELETE, "sup_revue/" + jsonSupprimerRevue, null);
+                return (liste != null);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Log.Error("Access.SupprimerRevue catch jsonSupprimerRevue={0} erreur={1} ", jsonSupprimerRevue, ex.Message);
+            }
+            return false;
+        }
+
+        /// <summary>
         /// Retourne les commandes des documents
         /// </summary>
         /// <param name="idDocument">id du document concerné</param>
@@ -532,6 +705,6 @@ namespace MediaTekDocuments.dal
                 Log.Error("Access.SupprimerAbonnementRevue catch jsonSupprimerAbonnementRevue={0} erreur={1} ", jsonSupprimerAbonnementRevue, ex.Message);
             }
             return false;
-        }
+        } 
     }
 }
