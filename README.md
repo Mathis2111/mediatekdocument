@@ -43,9 +43,13 @@ Blocage complet pour le service "Culture" avec fermeture automatique de l'applic
 
 Restriction de l'alerte de fin d'abonnement aux utilisateurs concernés.<br>
 
-### Corrections de Sécurité
+### Télécharegement de l'applcation
 <br>
-#### Problème 1 : Stockage des informations sensibles
+Pour télécharger l'application, il vous suffit de cliquer sur le fichier "MediatekDocument2025Installeur" situé dans les fichiers plus haut.<br>
+
+### Corrections de Sécurité<br>
+
+### Problème 1 : Stockage des informations sensibles
 <br>
 Sécurisation des identifiants de connexion en les stockant dans App.config plutôt que directement dans le code.<br>
 
