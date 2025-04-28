@@ -29,12 +29,18 @@ namespace MediaTekDocuments.manager
         /// <param name="authenticationString">chaîne d'authentification</param>
         private ApiRest(String uriApi, String authenticationString="")
         {
-            httpClient = new HttpClient() { BaseAddress = new Uri(uriApi) };
-            // prise en compte dans l'url de l'authentificaiton (basic authorization), si elle n'est pas vide
+            // Création du handler spécial pour accepter n'importe quel certificat SSL
+            HttpClientHandler handler = new HttpClientHandler();
+            handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true;
+
+
+            httpClient = new HttpClient(handler) { BaseAddress = new Uri(uriApi) };
+           // prise en compte dans l'url de l'authentificaiton (basic authorization), si elle n'est pas vide
             if (!String.IsNullOrEmpty(authenticationString))
             {
                 String base64EncodedAuthenticationString = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(authenticationString));
                 httpClient.DefaultRequestHeaders.Add("Authorization", "Basic " + base64EncodedAuthenticationString);
+               
             }
         }
 
