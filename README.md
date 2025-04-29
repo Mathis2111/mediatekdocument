@@ -9,7 +9,7 @@ Pour télécharger l'application, il vous suffit de cliquer sur le fichier "Medi
 - Garder le dossier proposé, sélectionner "Tout le monde" puis cliquer sur Suivant.<br>
 - Confirmer en cliquant à nouveau sur Suivant.<br>
 - A la fin de l'installation, cliquer sur "Fermer".<br>
-- Une page va vous notifier que "windows a protégé votre ordinateur, il faudra cliquer sur "Information complémentaire",<br>
+- Une page va vous notifier que "windows a protégé votre ordinateur, il faudra cliquer sur "Information complémentaire",
 puis "Exécuter quand même".<br>
 - Si vous avez un message de votre antivirus lors du lancement de la page de connexion, il faudra fermer la page de connexion et le message de l'antivirus,
   puis la page de connexion devrait se réouvrir toute seule.<br>
@@ -43,13 +43,13 @@ Possibilité de sélectionner une revue et d'afficher les abonnements associés.
 Suppression d'une commande de revue uniquement si aucun exemplaire n'y est rattaché.<br>
 
 Ajout d'une alerte automatique affichant les abonnements se terminant dans moins de 30 jours.<br>
-![img7](https://github.com/Mathis2111/mediatekdocument/blob/main/Image%20README/dateExpiration.png)<br>
+![img4](https://github.com/Mathis2111/mediatekdocument/blob/main/Image%20README/dateExpiration.png)<br>
 
 ### Mise en place de l'authentification
 <br>
 
 Fenêtre d'authentification à l'ouverture de l'application.<br>
-![img9](https://github.com/Mathis2111/mediatekdocument/blob/main/Image%20README/PageConnexion.png)<br>
+![img4](https://github.com/Mathis2111/mediatekdocument/blob/main/Image%20README/PageConnexion.png)<br>
 Gestion des droits d'accès : certains onglets deviennent invisibles ou inactifs selon l'utilisateur.<br>
 
 Blocage complet pour le service "Culture" avec fermeture automatique de l'application.<br>
