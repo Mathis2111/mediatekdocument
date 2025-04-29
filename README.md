@@ -1,6 +1,19 @@
 # MediatekDocuments README Complémentaire
 Cette application permet de gérer les documents (livres, DVD, revues) d'une médiathèque. Elle a été codée en C# sous Visual Studio 2019. C'est une application de bureau, prévue d'être installée sur plusieurs postes accédant à la même base de données.<br>
-L'application exploite une API REST pour accéder à la BDD MySQL. Voici le lien du dépôt d'origine de l'application : https://github.com/CNED-SLAM/MediaTekDocuments
+L'application exploite une API REST pour accéder à la BDD MySQL. Voici le lien du dépôt d'origine de l'application : https://github.com/CNED-SLAM/MediaTekDocuments<br>
+
+### Téléchargement de l'application
+<br>
+Pour télécharger l'application, il vous suffit de cliquer sur le fichier "MediatekDocument2025Installeur" situé dans les fichiers plus haut, puis cliqué sur "view Raw".<br>
+- La fenêtre "Bienvenue dans l'Assistant Installation de Setup" s'ouvre. Cliquez sur "Suivant".<br>
+- Garder le dossier proposé, sélectionner "Tout le monde" puis cliquer sur Suivant.<br>
+- Confirmer en cliquant à nouveau sur Suivant.<br>
+- A la fin de l'installation, cliquer sur "Fermer".<br>
+- Une page va vous notifier que "windows a protégé votre ordinateur, il faudra cliquer sur "Information complémentaire",<br>
+puis "Exécuter quand même".<br>
+- Si vous avez un message de votre antivirus lors du lancement de la page de connexion, il faudra fermer la page de connexion et le message de l'antivirus,
+  puis la page de connexion devrait se réouvrir toute seule.<br>
+
 ## Ajouts réalisés
 ### Gestion des commandes de livres et DVD
 <br>
@@ -42,14 +55,6 @@ Gestion des droits d'accès : certains onglets deviennent invisibles ou inactifs
 Blocage complet pour le service "Culture" avec fermeture automatique de l'application.<br>
 
 Restriction de l'alerte de fin d'abonnement aux utilisateurs concernés.<br>
-
-### Télécharegement de l'applcation
-<br>
-Pour télécharger l'application, il vous suffit de cliquer sur le fichier "MediatekDocument2025Installeur" situé dans les fichiers plus haut, puis cliqué sur "view Raw".<br>
-- La fenêtre "Bienvenue dans l'Assistant Installation de Setup" s'ouvre. Cliquez sur "Suivant".<br>
-- Garder le dossier proposé, sélectionner "Tout le monde" puis cliquer sur Suivant.<br>
-- Confirmer en cliquant à nouveau sur Suivant.<br>
-- A la fin de l'installation, cliquer sur "Fermer".<br>
 
 ### Corrections de Sécurité<br>
 
