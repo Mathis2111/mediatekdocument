@@ -132,6 +132,76 @@ namespace MediaTekDocuments.controller
         }
 
         /// <summary>
+        /// Supprimme un livre dans la bdd
+        /// </summary>
+        /// <param name="livre">>Objet de type Livre à supprimer</param>
+        /// <returns>True si la suppression a pu se faire</returns>
+        public bool SupprimerLivre(Livre livre)
+        {
+            return access.SupprimerLivre(livre);
+        }
+
+        /// <summary>
+        /// Ajouter un dvd dans la bdd
+        /// </summary>
+        /// <param name="dvd">L'objet Dvd concerné</param>
+        /// <returns>True si l'ajout a pu se faire</returns>
+        public bool AjouterDvd(Dvd dvd)
+        {
+            return access.AjouterDvd(dvd);
+        }
+
+        /// <summary>
+        /// Modifier un dvd dans la bdd
+        /// </summary>
+        /// <param name="dvd">L'objet Dvd concerné</param>
+        /// <returns>True si l'ajout a pu se faire</returns>
+        public bool UpdateDvd(Dvd dvd)
+        {
+            return access.UpdateDvd(dvd);
+        }
+
+        /// <summary>
+        /// Supprimme un dvd dans la bdd
+        /// </summary>
+        /// <param name="dvd">Objet de type Dvd à supprimer</param>
+        /// <returns>True si la suppression a pu se faire</returns>
+        public bool SupprimerDvd(Dvd dvd)
+        {
+            return access.SupprimerDvd(dvd);
+        }
+
+        /// <summary>
+        /// Ajouter une revue dans la bdd
+        /// </summary>
+        /// <param name="revue">L'objet Revue concerné</param>
+        /// <returns>True si l'ajout a pu se faire</returns>
+        public bool AjouterRevue(Revue revue)
+        {
+            return access.AjouterRevue(revue);
+        }
+
+        /// <summary>
+        /// Modifier une revue dans la bdd
+        /// </summary>
+        /// <param name="revue">L'objet Revue concerné</param>
+        /// <returns>True si l'ajout a pu se faire</returns>
+        public bool UpdateRevue(Revue revue)
+        {
+            return access.UpdateRevue(revue);
+        }
+
+        /// <summary>
+        /// Supprimme une revue dans la bdd
+        /// </summary>
+        /// <param name="revue">Objet de type Revue à supprimer</param>
+        /// <returns>True si la suppression a pu se faire</returns>
+        public bool SupprimerRevue(Revue revue)
+        {
+            return access.SupprimerRevue(revue);
+        }
+
+        /// <summary>
         /// récupère les commandes d'un document
         /// </summary>
         /// <param name="idDocument">id du document concerné</param>

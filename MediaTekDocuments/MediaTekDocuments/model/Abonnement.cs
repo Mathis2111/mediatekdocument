@@ -6,21 +6,15 @@ using System.Threading.Tasks;
 
 namespace MediaTekDocuments.model
 {
+    /// <summary>
+    /// Classe métier Abonnement (Abonnement pour une revue) hérite de commande
+    /// </summary>
     public class Abonnement : Commande
     {
-        /// <summary>
-        /// Récupère ou définit la date de fin de l'abonnement
-        /// </summary>
         public DateTime DateFinAbonnement { get; set; }
 
-        /// <summary>
-        /// Récupère ou définit l'identifiant de la revue correspondant à l'abonnement
-        /// </summary>
         public string IdRevue { get; set; }
 
-        /// <summary>
-        /// Récupère ou définit le titre de la revue correspondant à l'abonnement
-        /// </summary>
         public string Titre { get; set; }
 
         /// <summary>

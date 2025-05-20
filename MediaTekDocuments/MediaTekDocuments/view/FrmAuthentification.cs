@@ -22,20 +22,19 @@ namespace MediaTekDocuments.view
             controller = new FrmMediatekController();
         }
 
-        private void FrmAuthentification_Load(object sender, EventArgs e)
-        {
-            
-        }
-
+        /// <summary>
+        /// Bouton pour valider l'authentification
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void btnValider_Click(object sender, EventArgs e)
         {
             FrmAlerteFinAbonnement frmAlerteFinAbonnement = new FrmAlerteFinAbonnement(controller);
-            FrmAuthentification frmAuthentification = new FrmAuthentification();
             lesServices = controller.GetServiceByUserName(txtBoxNom.Text);
 
             if (lesServices.Count > 0)
             {
-                string nomService = lesServices[0].TypeService;
+                string nomService = lesServices[0].Libelle;
 
                 lblNomService.Text = nomService;
 
@@ -53,7 +52,7 @@ namespace MediaTekDocuments.view
                 {
                    
                     FrmMediatek frmMediatek = new FrmMediatek();
-                    frmMediatek.GérerVisibilitéBoutons(false);
+                    frmMediatek.GérerVisibilitéObjets(false);
                     frmMediatek.ShowDialog();
                 }
             }

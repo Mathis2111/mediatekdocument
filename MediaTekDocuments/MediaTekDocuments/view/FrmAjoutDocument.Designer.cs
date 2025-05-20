@@ -132,7 +132,6 @@ namespace MediaTekDocuments.view
             this.cbxGenre.Name = "cbxGenre";
             this.cbxGenre.Size = new System.Drawing.Size(207, 21);
             this.cbxGenre.TabIndex = 44;
-            this.cbxGenre.SelectedIndexChanged += new System.EventHandler(this.cbxGenre_SelectedIndexChanged);
             // 
             // txtBoxImage
             // 

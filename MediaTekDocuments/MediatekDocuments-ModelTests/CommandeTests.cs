@@ -8,10 +8,10 @@ namespace MediatekDocuments_ModelTests
     /// Classe de test unitaire pour la classe métier Commande
     /// </summary>
     [TestClass]
-    class CommandeTests
+    public class CommandeTests
     {
         private const string id = "00060";
-        private static readonly DateTime dateCommande = new DateTime(2023, 3, 22);
+        private static readonly DateTime dateCommande = new DateTime(2025, 2, 22);
         private const double montant = 50;
 
         private static readonly Commande commande = new Commande(id, dateCommande, montant);

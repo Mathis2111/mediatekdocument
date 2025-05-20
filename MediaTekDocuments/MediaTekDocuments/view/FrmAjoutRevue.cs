@@ -12,53 +12,43 @@ using System.Windows.Forms;
 
 namespace MediaTekDocuments.view
 {
-    /// <summary>
-    /// Classe d'affichage
-    /// </summary>
-    public partial class FrmAjoutDocument : Form
+    public partial class FrmAjoutRevue : Form
     {
-        public Livre NouveauLivre { get; set; }
+        public Revue NouvelleRevue { get; set; }
         private readonly FrmMediatekController controller = new FrmMediatekController();
         private readonly BindingSource bdgGenres = new BindingSource();
         private readonly BindingSource bdgPublics = new BindingSource();
         private readonly BindingSource bdgRayons = new BindingSource();
-
-        public FrmAjoutDocument()
+        public FrmAjoutRevue()
         {
             InitializeComponent();
             ChargerComboBox();
         }
 
-        /// <summary>
-        /// Bouton permettant d'ajouter un livre 
-        /// </summary>
-        /// /// <param name="sender"></param>
-        /// /// <param name="e"></param>
-        private void btnAjouter_Click(object sender, EventArgs e)
+        private void btnValiderAjoutRevue_Click(object sender, EventArgs e)
         {
-            if (!cbxGenre.Text.Equals("") && !cbxPublic.Text.Equals("") && !cbxRayon.Text.Equals("") && !txtBoxID.Text.Equals(""))
+            if (!cbxGenreRevue.Text.Equals("") && !cbxPublicRevue.Text.Equals("") && !cbxRayonRevue.Text.Equals("") && !txbAjoutRevuesNumero.Text.Equals("") && !txbAjoutRevuesPeriodicite.Text.Equals("") && !txbAjoutRevuesDateMiseADispo.Text.Equals(""))
             {
-                string idGenre = ((MediaTekDocuments.model.Categorie)cbxGenre.SelectedItem).Id;
-                string idPublic = ((MediaTekDocuments.model.Categorie)cbxPublic.SelectedItem).Id;
-                string idRayon = ((MediaTekDocuments.model.Categorie)cbxRayon.SelectedItem).Id;
+                string idGenre = ((MediaTekDocuments.model.Categorie)cbxGenreRevue.SelectedItem).Id;
+                string idPublic = ((MediaTekDocuments.model.Categorie)cbxPublicRevue.SelectedItem).Id;
+                string idRayon = ((MediaTekDocuments.model.Categorie)cbxRayonRevue.SelectedItem).Id;
 
                 lblIdGenre.Text = idGenre;
                 lblIdPublic.Text = idPublic;
                 lblIdRayon.Text = idRayon;
 
-                NouveauLivre = new Livre(
-                    txtBoxID.Text,
-                    txtBoxTitre.Text,
-                    txtBoxImage.Text,
-                    txtBoxISBN.Text,
-                    txtBoxAuteur.Text,
-                    txtBoxCollection.Text,
+                NouvelleRevue = new Revue(
+                    txbAjoutRevuesNumero.Text,
+                    txbAjoutRevuesTitre.Text,
+                    txbAjoutRevuesImage.Text,
                     lblIdGenre.Text,
-                    cbxGenre.Text,
+                    cbxGenreRevue.Text,
                     lblIdPublic.Text,
-                    cbxPublic.Text,
+                    cbxPublicRevue.Text,
                     lblIdRayon.Text,
-                    cbxRayon.Text
+                    cbxRayonRevue.Text,
+                    txbAjoutRevuesPeriodicite.Text,
+                    int.Parse(txbAjoutRevuesDateMiseADispo.Text)
                 );
 
                 this.DialogResult = DialogResult.OK;
@@ -66,7 +56,7 @@ namespace MediaTekDocuments.view
             }
             else
             {
-                MessageBox.Show("Les champs Numéro du document, Genre, Public et Rayon sont obligatoire !", "Erreur");
+                MessageBox.Show("Les champs Numéro du document, Genre, Public, Rayon, Délai mise à dispo et Periodicité sont obligatoire !", "Erreur");
             }
         }
 
@@ -91,9 +81,9 @@ namespace MediaTekDocuments.view
         /// </summary>
         private void ChargerComboBox()
         {
-            RemplirComboCategorie(controller.GetAllGenres(), bdgGenres, cbxGenre);
-            RemplirComboCategorie(controller.GetAllPublics(), bdgPublics, cbxPublic);
-            RemplirComboCategorie(controller.GetAllRayons(), bdgRayons, cbxRayon);
+            RemplirComboCategorie(controller.GetAllGenres(), bdgGenres, cbxGenreRevue);
+            RemplirComboCategorie(controller.GetAllPublics(), bdgPublics, cbxPublicRevue);
+            RemplirComboCategorie(controller.GetAllRayons(), bdgRayons, cbxRayonRevue);
         }
     }
 }

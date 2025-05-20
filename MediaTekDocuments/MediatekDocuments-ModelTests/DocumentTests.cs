@@ -8,10 +8,10 @@ namespace MediatekDocuments_ModelTests
     /// Classe de test unitaire pour la classe métier Document
     /// </summary>
     [TestClass]
-    class DocumentTests
+    public class DocumentTests
     {
-        private const string id = "20007";
-        private const string titre = "Le seigneur des anneaux : le retour du roi";
+        private const string id = "0028";
+        private const string titre = "House of dragon : épisode 1";
         private const string image = "";
         private const string idGenre = "10019";
         private const string genre = "Fantazy";

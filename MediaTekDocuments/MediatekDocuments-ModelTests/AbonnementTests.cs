@@ -4,17 +4,24 @@ using System;
 
 namespace MediatekDocuments_ModelTests
 {
+    /// <summary>
+    /// Classe de test unitaire pour la classe métier Abonnement
+    /// </summary>
     [TestClass]
     public class AbonnementTests
     {
-        private const string id = "00050";
-        private static readonly DateTime dateCommande = new DateTime(2023, 3, 22);
-        private const double montant = 50;
-        private static readonly DateTime dateFinAbonnement = new DateTime(2023, 3, 30);
+        private const string id = "00005";
+        private static readonly DateTime dateCommande = new DateTime(2025, 2, 22);
+        private const double montant = 30;
+        private static readonly DateTime dateFinAbonnement = new DateTime(2025, 1, 30);
         private const string idRevue = "10003";
         private const string titre = "Challenges";
 
         private static readonly Abonnement abonnement = new Abonnement(id, dateCommande, montant, dateFinAbonnement, idRevue, titre);
+
+        /// <summary>
+        /// Teste le constructeur de la classe Abonnement
+        /// </summary>
         [TestMethod]
         public void AbonnementTest()
         {

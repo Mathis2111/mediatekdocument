@@ -2,7 +2,7 @@
 using System;
 using MediaTekDocuments.model;
 
-namespace MediaTekDocuments_ModelTests
+namespace MediatekDocuments_ModelTests
 {
     /// <summary>
     /// Classe de test unitaire pour la classe métier Dvd
@@ -10,12 +10,12 @@ namespace MediaTekDocuments_ModelTests
     [TestClass]
     public class DvdTests
     {
-        private const string id = "20008";
-        private const string titre = "Police Academy";
+        private const string id = "20005";
+        private const string titre = "Bienvenue au paradis";
         private const string image = "";
-        private const int duree = 96;
-        private const string realisateur = "Hugh Wilson";
-        private const string synopsis = "Académie de police ouverte à tout citoyen qui veut s'y inscrire, sans examen d'entrée préalable.";
+        private const int duree = 125;
+        private const string realisateur = "Jean Peuplus";
+        private const string synopsis = "Entrée gratuite au paradis des annimaux.";
         private const string idGenre = "10013";
         private const string genre = "Comédie";
         private const string idPublic = "00003";

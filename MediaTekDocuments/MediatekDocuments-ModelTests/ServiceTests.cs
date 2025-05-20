@@ -2,7 +2,7 @@
 using System;
 using MediaTekDocuments.model;
 
-namespace MediaTekDocuments_ModelTests
+namespace MediatekDocuments_ModelTests
 {
     /// <summary>
     /// Classe de test unitaire pour la classe métier Service
@@ -10,10 +10,9 @@ namespace MediaTekDocuments_ModelTests
     [TestClass]
     public class ServiceTests
     {
-        private const string id = "00001";
-        private const string libelle = "Administratif";
+        private const string libelle = "Administrateur";
 
-        private static readonly Service service = new Service(id, libelle);
+        private static readonly Service service = new Service(libelle);
 
         /// <summary>
         ///  Teste le constructeur de la classe Service
@@ -21,7 +20,6 @@ namespace MediaTekDocuments_ModelTests
         [TestMethod()]
         public void ServiceTest()
         {
-            Assert.AreEqual(id, service.Id, "devrait réussir : id valorisé");
             Assert.AreEqual(libelle, service.Libelle, "devrait réussir : libellé valorisé");
         }
     }

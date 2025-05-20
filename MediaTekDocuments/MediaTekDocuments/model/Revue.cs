@@ -14,8 +14,8 @@ namespace MediaTekDocuments.model
             string periodicite, int delaiMiseADispo)
              : base(id, titre, image, idGenre, genre, idPublic, lePublic, idRayon, rayon)
         {
-            Periodicite = periodicite;
-            DelaiMiseADispo = delaiMiseADispo;
+            this.Periodicite = periodicite;
+            this.DelaiMiseADispo = delaiMiseADispo;
         }
 
     }

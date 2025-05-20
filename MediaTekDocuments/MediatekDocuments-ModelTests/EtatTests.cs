@@ -2,7 +2,7 @@
 using System;
 using MediaTekDocuments.model;
 
-namespace MediaTekDocuments_ModelTests
+namespace MediatekDocuments_ModelTests
 {
     /// <summary>
     /// Classe de test unitaire pour la classe métier Etat

@@ -2,7 +2,7 @@
 using System;
 using MediaTekDocuments.model;
 
-namespace MediaTekDocuments_ModelTests
+namespace MediatekDocuments_ModelTests
 {
     /// <summary>
     /// Classe de test unitaire pour la classe métier Livre
@@ -10,12 +10,12 @@ namespace MediaTekDocuments_ModelTests
     [TestClass]
     public class LivreTests
     {
-        private const string id = "00023";
-        private const string titre = "Les 100";
+        private const string id = "00028";
+        private const string titre = "Hola todos";
         private const string image = "";
         private const string isbn = "11111111111";
-        private const string auteur = "Kass Morgan";
-        private const string collection = "Laffont";
+        private const string auteur = "Jean Tenmal";
+        private const string collection = "Petit pieds";
         private const string idGenre = "10002";
         private const string genre = "Science Fiction";
         private const string idPublic = "00003";

@@ -105,7 +105,6 @@ namespace MediaTekDocuments.view
             this.Controls.Add(this.lblConnexion);
             this.Name = "FrmAuthentification";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.FrmAuthentification_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

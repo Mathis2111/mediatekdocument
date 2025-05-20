@@ -2,7 +2,7 @@
 using System;
 using MediaTekDocuments.model;
 
-namespace MediaTekDocuments_ModelTests
+namespace MediatekDocuments_ModelTests
 {
     /// <summary>
     /// Classe de test unitaire pour la classe métier Exemplaire
@@ -10,14 +10,13 @@ namespace MediaTekDocuments_ModelTests
     [TestClass]
     public class ExemplaireTests
     {
-        private const int numero = 23;
-        private static readonly DateTime dateAchat = new DateTime(2023, 3, 22);
+        private const int numero = 21;
+        private static readonly DateTime dateAchat = new DateTime(2025, 2, 22);
         private const string photo = "";
         private const string idEtat = "00001";
         private const string id = "00003";
-        private const string libelle = "neuf";
 
-        private static readonly Exemplaire exemplaire = new Exemplaire(numero, dateAchat, photo, idEtat, id, libelle);
+        private static readonly Exemplaire exemplaire = new Exemplaire(numero, dateAchat, photo, idEtat, id);
 
         /// <summary>
         /// Teste le constructeur de la classe Exemplaire
@@ -30,7 +29,6 @@ namespace MediaTekDocuments_ModelTests
             Assert.AreEqual(photo, exemplaire.Photo, "devrait réussir : photo valorisée");
             Assert.AreEqual(idEtat, exemplaire.IdEtat, "devrait réussir : idEtat valorisé");
             Assert.AreEqual(id, exemplaire.Id, "devrait réussir : id du document valorisé");
-            Assert.AreEqual(libelle, exemplaire.Libelle, "devrait réussir : libellé valorisé");
         }
     }
 }

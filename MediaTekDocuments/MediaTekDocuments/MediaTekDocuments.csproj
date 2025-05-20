@@ -31,6 +31,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\MediaTekDocuments.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -114,6 +115,18 @@
     <Compile Include="model\Id_Genre_Public_Rayon.cs" />
     <Compile Include="model\Service.cs" />
     <Compile Include="model\Suivi.cs" />
+    <Compile Include="view\FrmAjoutDvd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmAjoutDvd.Designer.cs">
+      <DependentUpon>FrmAjoutDvd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmAjoutRevue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmAjoutRevue.Designer.cs">
+      <DependentUpon>FrmAjoutRevue.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\FrmAlerteFinAbonnement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +175,12 @@
     </Compile>
     <EmbeddedResource Include="view\FrmAjoutDocument.resx">
       <DependentUpon>FrmAjoutDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmAjoutDvd.resx">
+      <DependentUpon>FrmAjoutDvd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmAjoutRevue.resx">
+      <DependentUpon>FrmAjoutRevue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\FrmAlerteFinAbonnement.resx">
       <DependentUpon>FrmAlerteFinAbonnement.cs</DependentUpon>
